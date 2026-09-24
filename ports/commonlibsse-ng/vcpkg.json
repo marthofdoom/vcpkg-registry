@@ -1,0 +1,20 @@
+{
+  "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg/master/scripts/vcpkg.schema.json",
+  "name": "commonlibsse-ng",
+  "version-semver": "3.7.0",
+  "port-version": 1,
+  "description": "CharmedBaryon CommonLibSSE-NG 3.7.0 kept on MIT (marthofdoom/CommonLibSSE-NG branch mit-3.7).",
+  "homepage": "https://github.com/marthofdoom/CommonLibSSE-NG/tree/mit-3.7",
+  "license": "MIT",
+  "supports": "windows & x64",
+  "dependencies": [
+    {
+      "name": "vcpkg-cmake-config",
+      "host": true
+    },
+    "fmt",
+    "rapidcsv",
+    "spdlog",
+    "xbyak"
+  ]
+}
