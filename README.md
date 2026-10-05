@@ -9,7 +9,7 @@ A small vcpkg git registry for SKSE plugins. It holds one port.
 
 | port | version | fork commit |
 |---|---|---|
-| `commonlibsse-ng` | 3.7.0, port-version 19 | `11a5858be2c11f79b3259fbe1a7c4f38e03a8e13` |
+| `commonlibsse-ng` | 3.7.0, port-version 20 | `57be9d67086da3857da1d0171e77966674713aa5` |
 
 That commit is CharmedBaryon's 3.7.0, plus the fixes verified on the game's own code, the upstream MIT commits up
 to 2024-09, and Skyrim SE 1.7.104 support. The fork's README lists every change and the proof behind it.
@@ -20,7 +20,7 @@ Supported game versions:
 |---|---|
 | 1.5.97.0 | the Address Library, `version-1-5-97-0.bin` |
 | 1.6.1170.0 | the Address Library, `versionlib-1-6-1170-0.bin` |
-| 1.7.104.0 (Steam) | the fork's own id table, `Data/SKSE/Plugins/mit-idtable-v1-1-7-104-0.bin`, a separate download the plugin lists as a requirement |
+| 1.7.104.0 (Steam) | the fork's own id table, built into every plugin. Players install nothing for it. |
 
 Other builds are not verified. See the fork's README for exactly what each one does.
 
