@@ -1,8 +1,8 @@
 vcpkg_from_github(
         OUT_SOURCE_PATH SOURCE_PATH
         REPO marthofdoom/CommonLibSSE-NG
-        REF 71021ae0afdb3bcaad69128964e5b4a1da4b5fb6
-        SHA512  f5079554e1ae68acfef2a1a3d5e8d4e71b723ded4ad99f3ba8f1584b24a147d6b7f924773739b4ec509e4a0efed25e78483da68a10274bc00ce7f35c2b982170
+        REF 11a5858be2c11f79b3259fbe1a7c4f38e03a8e13
+        SHA512  d0c0742c8ecd67e27a981d26a8d24134acdc57bf572827370eaff207c7cb1a4c2eabb61c01ee0c274f68d3cfae53ad96cf4eb43317a08ee36bea81a8272da447
         HEAD_REF main
 )
 

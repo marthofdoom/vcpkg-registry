@@ -9,7 +9,7 @@ A small vcpkg git registry for SKSE plugins. It holds one port.
 
 | port | version | fork commit |
 |---|---|---|
-| `commonlibsse-ng` | 3.7.0, port-version 17 | `71021ae0afdb3bcaad69128964e5b4a1da4b5fb6` |
+| `commonlibsse-ng` | 3.7.0, port-version 19 | `11a5858be2c11f79b3259fbe1a7c4f38e03a8e13` |
 
 That commit is CharmedBaryon's 3.7.0, plus the fixes verified on the game's own code, the upstream MIT commits up
 to 2024-09, and Skyrim SE 1.7.104 support. The fork's README lists every change and the proof behind it.
