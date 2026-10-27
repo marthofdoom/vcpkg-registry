@@ -9,7 +9,13 @@ A small vcpkg git registry for SKSE plugins. It holds one port.
 
 | port | version | fork commit |
 |---|---|---|
-| `commonlibsse-ng` | 3.7.0, port-version 20 | `57be9d67086da3857da1d0171e77966674713aa5` |
+| `commonlibsse-ng` | 3.7.0, port-version 21 | `0b9042312a691d278e8fc5d0d2d52a0d8ec64089` |
+
+Port-version 21 carries id table revision 4: 19 more 1.7.104 ids that Harbinger and MFO verified (the fork README,
+"F3 slice 1"). A plugin that switches a raw 1.7.104 address to one of those ids calls
+`REL::IDDatabase::RequireMitTableRevision(4)` right after `SKSE::Init`, so a build against an older table stops at
+load with a message instead of failing on the id. Fork CI is green again in this version (Conan 2 recipe, clang-cl
+and MSVC compile fixes; no behaviour change).
 
 That commit is CharmedBaryon's 3.7.0, plus the fixes verified on the game's own code, the upstream MIT commits up
 to 2024-09, and Skyrim SE 1.7.104 support. The fork's README lists every change and the proof behind it.
