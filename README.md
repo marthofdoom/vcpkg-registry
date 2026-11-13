@@ -9,13 +9,21 @@ A small vcpkg git registry for SKSE plugins. It holds one port.
 
 | port | version | fork commit |
 |---|---|---|
-| `commonlibsse-ng` | 3.7.0, port-version 21 | `0b9042312a691d278e8fc5d0d2d52a0d8ec64089` |
+| `commonlibsse-ng` | 3.7.0, port-version 22 | `961e880a4d40dec94050014ea2b4f4a4bb4634ad` |
 
-Port-version 21 carries id table revision 4: 19 more 1.7.104 ids that Harbinger and MFO verified (the fork README,
-"F3 slice 1"). A plugin that switches a raw 1.7.104 address to one of those ids calls
-`REL::IDDatabase::RequireMitTableRevision(4)` right after `SKSE::Init`, so a build against an older table stops at
-load with a message instead of failing on the id. Fork CI is green again in this version (Conan 2 recipe, clang-cl
-and MSVC compile fixes; no behaviour change).
+Port-version 22 carries a crash fix and id table revision 5 (the fork README, "Fix: a virtual function that returns
+a class" and "F3 slice 2").
+
+- `REL::RelocateVirtual` called a game virtual that returns a class the wrong way, and the game wrote its result over
+  the object. `Actor::QLastRiddenMount` and `Actor::DropObject` crashed or corrupted the actor. Every plugin that
+  calls either one should rebuild against this version.
+- Revision 5 adds 22 more 1.7.104 ids: the `ExtraDataList` destructor and 20 functions Harbinger verified. A plugin
+  that switches a raw 1.7.104 address to one of those ids calls `REL::IDDatabase::RequireMitTableRevision(5)` right
+  after `SKSE::Init`, so a build against an older table stops at load with a message instead of failing on the id.
+- `ExtraDataList` has its destructor, and `new ExtraDataList()` works on 1.7.104.
+
+Port-version 21 carried id table revision 4: 19 1.7.104 ids that Harbinger and MFO verified (the fork README,
+"F3 slice 1").
 
 That commit is CharmedBaryon's 3.7.0, plus the fixes verified on the game's own code, the upstream MIT commits up
 to 2024-09, and Skyrim SE 1.7.104 support. The fork's README lists every change and the proof behind it.
