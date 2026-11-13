@@ -9,7 +9,11 @@ A small vcpkg git registry for SKSE plugins. It holds one port.
 
 | port | version | fork commit |
 |---|---|---|
-| `commonlibsse-ng` | 3.7.0, port-version 22 | `961e880a4d40dec94050014ea2b4f4a4bb4634ad` |
+| `commonlibsse-ng` | 3.7.0, port-version 23 | `add17c090cfa312d370bfcdd55d2eb989d086fec` |
+
+Port-version 23 makes port-version 22 right for single-runtime builds: an SE-only or VR-only plugin that destroys an
+`ExtraDataList` links again, and the fork's own tests pass in every configuration. A plugin built for all runtimes
+gets the same code as with port-version 22.
 
 Port-version 22 carries a crash fix and id table revision 5 (the fork README, "Fix: a virtual function that returns
 a class" and "F3 slice 2").
